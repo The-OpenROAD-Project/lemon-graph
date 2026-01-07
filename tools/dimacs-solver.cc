@@ -222,11 +222,13 @@ int main(int argc, const char *argv[]) {
       if (!output) {
         throw IoError("Cannot open the file for writing", ap.files()[1]);
       }
+      [[fallthrough]];
     case 1:
       input.open(ap.files()[0].c_str());
       if (!input) {
         throw IoError("File cannot be found", ap.files()[0]);
       }
+      [[fallthrough]];
     case 0:
       break;
     default:
@@ -251,6 +253,7 @@ int main(int argc, const char *argv[]) {
           break;
         case DimacsDescriptor::SP:
           std::cout << "sp";
+          break;
         case DimacsDescriptor::MAT:
           std::cout << "mat";
           break;

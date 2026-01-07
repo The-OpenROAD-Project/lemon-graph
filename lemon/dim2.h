@@ -53,11 +53,8 @@ namespace lemon {
       ///Second coordinate
       T y;
 
-      ///Default constructor
-      Point() {}
-
-      ///Construct an instance from coordinates
-      Point(T a, T b) : x(a), y(b) { }
+      ///Combined constructor
+      Point(T a = 0, T b = 0) : x(a), y(b) { }
 
       ///Returns the dimension of the vector (i.e. returns 2).
 
