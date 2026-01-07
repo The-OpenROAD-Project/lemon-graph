@@ -253,6 +253,7 @@ int main(int argc, const char *argv[]) {
           break;
         case DimacsDescriptor::SP:
           std::cout << "sp";
+          break;
         case DimacsDescriptor::MAT:
           std::cout << "mat";
           break;
